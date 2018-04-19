@@ -14,6 +14,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { PendientesComponent } from '../pages/pendientes/pendientes.component';
 import { TerminadosComponent } from '../pages/terminados/terminados.component';
+import { AgregarComponent } from '../pages/agregar/agregar.component';
+import { PlaceHolderPipe } from './pipes/placerholder.pipe';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { TerminadosComponent } from '../pages/terminados/terminados.component';
     MyApp,
     TabsPage,
     PendientesComponent,
-    TerminadosComponent
+    TerminadosComponent,
+    AgregarComponent,
+    PlaceHolderPipe
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,8 @@ import { TerminadosComponent } from '../pages/terminados/terminados.component';
     MyApp,
     TabsPage,
     PendientesComponent,
-    TerminadosComponent
+    TerminadosComponent,
+    AgregarComponent
   ],
   providers: [
     StatusBar,
