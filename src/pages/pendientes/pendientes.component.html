@@ -5,20 +5,21 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-card *ngFor="let lista of _listaDeseos.listas">
-        <ion-item>
-            BOTON !!
+    <ion-card *ngFor="let lista of _listaDeseos.listas;let i=index">
+        <ion-item color="dark" (click)="verDetalle(lista,i)">
+            <h2>{{lista.nombre}}</h2>
+            <ion-note item-right>
+                {{lista.items.length}}
+            </ion-note>
         </ion-item>
-        <h2>{{lista.nombre}}</h2>
+
         <ion-list>
-            <ion-item>
-                <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle">Uncharted</ion-icon>
+            <ion-item *ngFor="let item of lista.items | slice:0:2" (click)="verDetalle(lista,i)">
+                    <ion-label>{{item.nombre}}</ion-label>
+                    <ion-checkbox color="primary" [checked]="item.completado"></ion-checkbox>
             </ion-item>
-            <ion-item>
-                <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle">Horizon zero dawn</ion-icon>
-            </ion-item>
-            <ion-item>
-                <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle">The unity</ion-icon>
+            <ion-item *ngIf="lista.items.length > 2">
+                <ion-icon ios="ios-arrow-dropdown-circle" md="md-arrow-dropdown-circle" color="primary"></ion-icon>
             </ion-item>
         </ion-list>
     </ion-card>

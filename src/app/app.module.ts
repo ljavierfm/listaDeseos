@@ -16,6 +16,7 @@ import { PendientesComponent } from '../pages/pendientes/pendientes.component';
 import { TerminadosComponent } from '../pages/terminados/terminados.component';
 import { AgregarComponent } from '../pages/agregar/agregar.component';
 import { PlaceHolderPipe } from './pipes/placerholder.pipe';
+import { DetalleComponent } from '../pages/detalle/detalle.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PlaceHolderPipe } from './pipes/placerholder.pipe';
     PendientesComponent,
     TerminadosComponent,
     AgregarComponent,
-    PlaceHolderPipe
+    PlaceHolderPipe,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { PlaceHolderPipe } from './pipes/placerholder.pipe';
     TabsPage,
     PendientesComponent,
     TerminadosComponent,
-    AgregarComponent
+    AgregarComponent,
+    DetalleComponent
   ],
   providers: [
     StatusBar,
