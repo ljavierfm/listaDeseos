@@ -38,6 +38,7 @@ export class DetalleComponent implements OnInit {
         this.lista.terminada=todosMarcados;
 
         this._listaDeseos.actualizarData();
+        console.log(this.lista.terminada?"lista terminada":"lista no terminada");
     }
 
     borrarLista() {

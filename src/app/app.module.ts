@@ -17,6 +17,7 @@ import { TerminadosComponent } from '../pages/terminados/terminados.component';
 import { AgregarComponent } from '../pages/agregar/agregar.component';
 import { PlaceHolderPipe } from './pipes/placerholder.pipe';
 import { DetalleComponent } from '../pages/detalle/detalle.component';
+import { PendientesPipe } from './pipes/pendientes.pipes';
 
 
 @NgModule({
@@ -27,7 +28,9 @@ import { DetalleComponent } from '../pages/detalle/detalle.component';
     TerminadosComponent,
     AgregarComponent,
     PlaceHolderPipe,
+    PendientesPipe,
     DetalleComponent
+
   ],
   imports: [
     BrowserModule,
