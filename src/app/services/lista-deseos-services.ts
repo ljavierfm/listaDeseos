@@ -27,4 +27,9 @@ export class ListaDeseosService {
         this.listas.push(lista);
         this.actualizarData();
     }
+
+    eliminarLista(index:number){
+        this.listas.splice(index,1);
+        this.actualizarData();
+    }
 }
